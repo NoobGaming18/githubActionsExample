@@ -1,5 +1,16 @@
+name: Email Test Action
+
+on:
+  push:
+    branches:
+      - main  # or 'master', based on your repo
+
 jobs:
   test:
+    runs-on: ubuntu-latest
     steps:
+      - name: Checkout code
+        uses: actions/checkout@v4
+
       - name: 23f3003751@ds.study.iitm.ac.in
-        run: echo "Hello, world!"
+        run: echo "Hello, world! GitHub Action with email in step name."
